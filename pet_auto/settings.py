@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #third-party
+    'django_celery_beat',
 
     #apps
-    'auto_api',
+    'pet_auto.auto_api',
 ]
 
 MIDDLEWARE = [
