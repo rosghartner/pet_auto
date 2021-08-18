@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     #apps
     'pet_auto.auto_api',
+    'pet_auto.tbot',
 ]
 
 MIDDLEWARE = [
