@@ -1,7 +1,6 @@
-from django.test import TestCase
 from rest_framework import test, status
 
-from pet_auto.auto_api import views
+from pet_auto.tbot import views
 
 
 class AutoAPITestCase(test.APITestCase):
@@ -10,6 +9,6 @@ class AutoAPITestCase(test.APITestCase):
     def setUp(self):
         pass
 
-    def test_1(self):
-        s = views.AutoSearchViewSet.search()
+    def test_2(self):
+        s = views.NoticeViewSet.medicine_notice_p()
         print('+')
