@@ -10,5 +10,5 @@ class AutoAPITestCase(test.APITestCase):
         pass
 
     def test_2(self):
-        s = views.BotViewSet.send_message('hi')
+        s = views.NoticeViewSet.medicine_notice_p()
         print('+')

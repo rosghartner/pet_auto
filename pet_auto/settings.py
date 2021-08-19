@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '12345'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'asd')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -112,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Kiev'
 
 USE_I18N = True
 
@@ -136,3 +140,13 @@ CELERY_BEAT_SCHEDULER='django_celery_beat.schedulers:DatabaseScheduler'
 CELERY_BROKER_URL = 'redis://redis:6379'
 CELERY_RESULT_BACKEND = 'redis://redis:6379'
 CELERY_TASK_TIME_LIMIT = 30 * 60
+
+
+TELEGRAM_API_KEY = os.environ.get('TELEGRAM_API_KEY')
+AUTORIA_API_KEY = os.environ.get('AUTORIA_API_KEY')
+
+CHAT_ID_1 = os.environ.get('CHAT_ID_1')
+CHAT_ID_2 = os.environ.get('CHAT_ID_2')
+USERNAME_1 = os.environ.get('USERNAME_1')
+USERNAME_2 = os.environ.get('USERNAME_2')
+USERNAME_3 = os.environ.get('USERNAME_3')
